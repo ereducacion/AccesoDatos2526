@@ -15,22 +15,26 @@ public class EscribeLeeFichAleatorio {
 			int tamagnoRegistro = 4 + (tamagnoNombreMax*2) ;
 			Persona p1 = new Persona(21, "Juana");
 			Persona p2 = new Persona(23, "Pedro");
-			
-/*			ficheroAleatorio.writeChars("uno");
-			ficheroAleatorio.writeChars("dos");
-			ficheroAleatorio.writeChars("tres");
-*/			
-			
+				
 			long pos = 1;
 			ficheroAleatorio.seek(pos); // primera posicion
 			ficheroAleatorio.writeInt(p1.getEdad()); //primero escribo la edad
-			ficheroAleatorio.writeChars(p1.getNombre()); // después escribo el nombre
-			
+			// ahora escribo el nombre, preparando el espacio que tengo definido
+			StringBuffer bufferp1= new StringBuffer();
+			bufferp1.append(p1.getNombre());
+			bufferp1.setLength(tamagnoNombreMax); // si es necesario se rellena con espacios en blanco el nombre, para ocupar el tamaÃ±o deseado
+			ficheroAleatorio.writeChars(bufferp1.toString());
+
 			
 			pos = pos + tamagnoRegistro;
 			ficheroAleatorio.seek(pos);
 			ficheroAleatorio.writeInt(p2.getEdad()); //primero escribo la edad
-			ficheroAleatorio.writeChars(p2.getNombre()); // después escribo el nombre
+			// ahora escribo el nombre, preparando el espacio que tengo definido
+			StringBuffer bufferp2= new StringBuffer();
+			bufferp2.append(p2.getNombre());
+			bufferp2.setLength(tamagnoNombreMax); // si es necesario se rellena con espacios en blanco el nombre, para ocupar el tamaÃ±o deseado
+			ficheroAleatorio.writeChars(bufferp2.toString());
+
 			
 			System.out.println("He escrito");
 			
@@ -46,6 +50,7 @@ public class EscribeLeeFichAleatorio {
 			
 			System.out.println("El curso se ha quedado en la posicion " + ficheroAleatorio.getFilePointer());
 						
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
