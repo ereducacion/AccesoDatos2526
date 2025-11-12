@@ -1,0 +1,55 @@
+package app;
+
+import java.util.Iterator;
+import java.util.List;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import util.HibernateUtil;
+
+import datos.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// ------------------UTILIZAMOS LO DEFINIDO ANTES-------------
+		//obtener la fábrica de la conexión actual para crear una sesión
+		SessionFactory fabrica = HibernateUtil.getSessionFactory();
+		//------------------------------------------------------------
+		// creamos la sesión
+		Session sesion = fabrica.openSession();	
+		// creamos la transacción de la sesión
+		Transaction tx = sesion.beginTransaction();
+		
+		
+		System.out.println("Leo los libros");	
+        List<Libro> libros = sesion.createQuery("from Libro", Libro.class).list();
+
+		// Obtenemos un Iterador y recorremos la lista.
+		Iterator <Libro> iter = libros.iterator();
+		System.out.println("Número de registros:"  + libros.size());
+		while (iter.hasNext())
+		{
+		   //extraer el objeto
+			Libro libro = (Libro) iter.next(); 
+			System.out.println("Libro ISBN = " + libro.getIsbn() + " Titulo=" + libro.getTitulo());		   
+		}
+
+		System.out.println("FUNCIONO!!");
+		
+		tx.commit();
+		
+		
+		
+		sesion.close();
+		fabrica.close();
+		System.exit(0);	
+		
+	}
+
+}
