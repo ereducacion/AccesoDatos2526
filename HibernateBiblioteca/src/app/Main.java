@@ -25,12 +25,10 @@ public class Main {
 		Session sesion = fabrica.openSession();	
 		// creamos la transacción de la sesión
 		Transaction tx = sesion.beginTransaction();
-		
-		
 		System.out.println("Leo los libros");	
         List<Libro> libros = sesion.createQuery("from Libro", Libro.class).list();
 
-		// Obtenemos un Iterador y recorremos la lista.
+				// Obtenemos un Iterador y recorremos la lista.
 		Iterator <Libro> iter = libros.iterator();
 		System.out.println("Número de registros:"  + libros.size());
 		while (iter.hasNext())
