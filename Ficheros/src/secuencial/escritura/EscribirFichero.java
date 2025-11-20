@@ -20,9 +20,10 @@ public class EscribirFichero {
 			String linea= sc.nextLine();
 			
 			escritor.write(linea);
+			escritor.write("\n");
 			escritor.close();
 			
-			// ¿cómo hago para que no se sobreescribra?
+			// ï¿½cï¿½mo hago para que no se sobreescribra?
 			
 			
 		} catch (IOException e) {

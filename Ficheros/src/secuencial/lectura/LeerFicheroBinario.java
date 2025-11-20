@@ -9,6 +9,8 @@ public class LeerFicheroBinario {
 	public static void main(String[] args) { 
 		
 		try{
+			double a = System.currentTimeMillis();			
+
 			File mifichero = new File("info.jpg");
 			
 			FileInputStream lectorBinario = new FileInputStream(mifichero);    
@@ -19,14 +21,17 @@ public class LeerFicheroBinario {
 			//CADA VUELTA QUE DA EN EL WHILE ES UN BYTE
 			
 			while(!finalArchivo){                
-				//el método read devuelve un entero
+				//el mï¿½todo read devuelve un entero
 				int byteEntrada = lectorBinario.read();                
 				if (byteEntrada==-1){
 					finalArchivo = true;                                      
 				}
 				System.out.println(byteEntrada); 
 			}            
-			lectorBinario.close();            
+			lectorBinario.close();   
+			double b = System.currentTimeMillis();			
+			System.out.println("Ha tardado " + (b-a));
+			
 		}catch(IOException e){
 			System.out.println("Mensaje: " + e.getMessage());
 			e.printStackTrace();

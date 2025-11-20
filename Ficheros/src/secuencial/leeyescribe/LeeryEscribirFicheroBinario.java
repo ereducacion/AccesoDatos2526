@@ -13,9 +13,9 @@ public class LeeryEscribirFicheroBinario {
 		File mifichero = new File("playa.jpg");
 		FileInputStream lectorBinario = new FileInputStream(mifichero);    
 
-		//escribiré en el fichero destino.jpg
+		//escribirï¿½ en el fichero destino.jpg
 		File mificherodestino = new File("playaResultado.jpg");
-		// creo el escritor SIN la opción de concatenar al final. Es una imagen
+		// creo el escritor SIN la opciï¿½n de concatenar al final. Es una imagen
 		FileOutputStream escritorBinario = new FileOutputStream(mificherodestino);
 
 		try{
@@ -33,6 +33,7 @@ public class LeeryEscribirFicheroBinario {
 				}
 				// lo escribo en el fichero de destino (convirtiendo de nuevo el int a byte)
 				escritorBinario.write((byte) byteEntrada);
+				
 			}            
 			
 		} catch(IOException e) {
@@ -44,7 +45,7 @@ public class LeeryEscribirFicheroBinario {
 			escritorBinario.close();
 		}
 		
-		System.out.println("TERMINÉ!!!");
+		System.out.println("TERMINÃ‰!!!");
 		
 	}
 

@@ -16,9 +16,9 @@ public class LeeryEscribirFicheroBinarioConBuffer {
 		FileInputStream lectorBinario = new FileInputStream(mifichero);  
 		BufferedInputStream cestaLectora = new BufferedInputStream(lectorBinario);
 
-		//escribiré en el fichero destino.jpg
-		File mificherodestino = new File("destino.jpg");
-		// creo el escritor SIN la opción de concatenar al final. Es una imagen
+		//escribirï¿½ en el fichero destino.jpg
+		File mificherodestino = new File("destinoPlaya.jpg");
+		// creo el escritor SIN la opciï¿½n de concatenar al final. Es una imagen
 		FileOutputStream escritorBinario = new FileOutputStream(mificherodestino);
 		BufferedOutputStream cestaEscritora = new BufferedOutputStream(escritorBinario);
 
@@ -42,17 +42,17 @@ public class LeeryEscribirFicheroBinarioConBuffer {
 			// COMO PUEDO MEJORAR ESTE BUCLE?!!!!
 			
 		} catch(IOException e) {
-			System.out.println("Mensaje: " + e.getMessage());
+			System.err.println("Mensaje: " + e.getMessage());
 			e.printStackTrace();
 			
 		} finally {
 			lectorBinario.close();
-			//cestaLectora.close();  //¿Qué pasa aquí?
+			//cestaLectora.close();  //ï¿½Quï¿½ pasa aquï¿½?
 			escritorBinario.close();
-			//cestaEscritora.close();  //¿Qué pasa aquí?
+			//cestaEscritora.close();  //ï¿½Quï¿½ pasa aquï¿½?
 		}
 		
-		System.out.println("TERMINÉ!!!");
+		System.err.println("TERMINÃ‰!!!");
 		
 	}
 

@@ -15,10 +15,9 @@ public class LeoFicheroTextoBuffer {
 	public static void main(String[] args) {		
 		File mifichero = new File ("saludo.txt");
 		try {
-			FileReader lector = new FileReader(mifichero);
-			
+			double a = System.currentTimeMillis();			
 			// ahora voy a leer utilizando un buffer
-			BufferedReader cestaTemporal = new BufferedReader(lector);
+			BufferedReader cestaTemporal = new BufferedReader(new FileReader(mifichero));
 			
 			String linea = cestaTemporal.readLine();
 			while (linea != null) {
