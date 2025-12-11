@@ -12,11 +12,11 @@ public class GeneraBDOO {
 
 	public static void main(String[] args) {
 		
-		Jugador j1 = new Jugador("María",22, "Zaragoza", "voleybol");
+		Jugador j1 = new Jugador("MarÃ­a",22, "Zaragoza", "voleybol");
 
 		ODB baseDatosOO = null;
 		try {
-			String nombreBD = "BDDeportes.test";
+			String nombreBD = "deportes.odb";
 			baseDatosOO = ODBFactory.open("src\\basedatos\\" + nombreBD);
 			
 			baseDatosOO.store(j1);
@@ -24,6 +24,7 @@ public class GeneraBDOO {
 			Equipo equipo = new Equipo("Estella", "voleybol");
 			
 			baseDatosOO.store(equipo);
+			System.out.println("Termino de generar la Base de datos");
 			
 		} catch (Exception e) {
 			e.printStackTrace();

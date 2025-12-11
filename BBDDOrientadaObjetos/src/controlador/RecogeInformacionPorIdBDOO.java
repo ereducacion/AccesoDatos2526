@@ -9,7 +9,7 @@ import org.neodatis.odb.core.oid.OIDFactory;
 import modelo.Equipo;
 import modelo.Jugador;
 
-public class AsginaEquipoBDOO {
+public class RecogeInformacionPorIdBDOO {
 
 	public static void main(String[] args) {
 		
@@ -21,25 +21,17 @@ public class AsginaEquipoBDOO {
 			baseDatosOO = ODBFactory.open(ruta + nombreBD);
 			
 			// recuperar al equipo
-			OID elIDdelEquipo = OIDFactory.buildObjectOID(4);
-			Equipo elequipo = (Equipo) baseDatosOO.getObjectFromId(elIDdelEquipo);
+			OID elIDdelEquipo = OIDFactory.buildObjectOID(2);
+			Object elobjeto = (Object) baseDatosOO.getObjectFromId(elIDdelEquipo);
 
-			// recuperar al jugador
-			Objects<Jugador> losjugadores = baseDatosOO.getObjects(Jugador.class);
+			if (elobjeto.getClass().equals(Equipo.class)) {
+				System.out.println("El deporte del equipo es " + ((Equipo)elobjeto).getDeporte());
+			} else if (elobjeto.getClass().equals(Jugador.class)) {
+				System.out.println("El jugador se llama "+ ((Jugador)elobjeto).getNombre());
+			}	
 			
-			// asignar el jugador al equipo
-			for (Jugador jugador : losjugadores) {
-				if (jugador.getDeporte().equals(elequipo.getDeporte())) { 
-					elequipo.addJugador(jugador);
-				}
-			}
-			
-			// guardar lo que he modificado
-			baseDatosOO.store(elequipo);
-			
-			// hare un commit
-			baseDatosOO.commit();
-			
+		} catch (org.neodatis.odb.ODBRuntimeException e) {
+			System.out.println("No existe ese id");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
