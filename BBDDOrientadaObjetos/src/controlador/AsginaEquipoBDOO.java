@@ -18,7 +18,7 @@ public class AsginaEquipoBDOO {
 		try {
 			String nombreBD = "deportes.odb";
 			String ruta = "src\\basedatos\\";
-			baseDatosOO = ODBFactory.open(ruta + nombreBD);
+			baseDatosOO = ODBFactory.open(ruta + nombreBD, "miusuario", "Pass!123456");
 			
 			// recuperar al equipo
 			OID elIDdelEquipo = OIDFactory.buildObjectOID(4);
@@ -26,6 +26,13 @@ public class AsginaEquipoBDOO {
 
 			// recuperar al jugador
 			Objects<Jugador> losjugadores = baseDatosOO.getObjects(Jugador.class);
+			
+			// EQUIVALENTE a las lineas de abajo
+//			if (losjugadores.hasNext()) {
+//				Jugador j = losjugadores.next();
+//				elequipo.addJugador(j);
+//			}
+			
 			
 			// asignar el jugador al equipo
 			for (Jugador jugador : losjugadores) {
@@ -39,6 +46,7 @@ public class AsginaEquipoBDOO {
 			
 			// hare un commit
 			baseDatosOO.commit();
+			System.out.println("Teminado");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -47,11 +55,6 @@ public class AsginaEquipoBDOO {
 				baseDatosOO.close();
 			}
 		}
-		
-		
-		
-		
-
 	}
 
 }

@@ -1,7 +1,5 @@
 package controlador;
 
-import java.util.ArrayList;
-
 import org.neodatis.odb.ODB;
 import org.neodatis.odb.ODBFactory;
 
@@ -17,8 +15,8 @@ public class GeneraBDOO {
 		ODB baseDatosOO = null;
 		try {
 			String nombreBD = "deportes.odb";
-			baseDatosOO = ODBFactory.open("src\\basedatos\\" + nombreBD);
-			
+			baseDatosOO = ODBFactory.open("src\\basedatos\\" + nombreBD, "miusuario", "Pass!123456");
+
 			baseDatosOO.store(j1);
 			
 			Equipo equipo = new Equipo("Estella", "voleybol");

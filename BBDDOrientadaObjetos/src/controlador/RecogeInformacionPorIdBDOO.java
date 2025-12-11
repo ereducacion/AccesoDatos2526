@@ -18,7 +18,7 @@ public class RecogeInformacionPorIdBDOO {
 		try {
 			String nombreBD = "deportes.odb";
 			String ruta = "src\\basedatos\\";
-			baseDatosOO = ODBFactory.open(ruta + nombreBD);
+			baseDatosOO = ODBFactory.open(ruta + nombreBD, "miusuario", "Pass!123456");
 			
 			// recuperar al equipo
 			OID elIDdelEquipo = OIDFactory.buildObjectOID(2);
