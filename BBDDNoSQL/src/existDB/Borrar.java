@@ -8,13 +8,12 @@ import java.util.Scanner;
 import org.xmldb.api.*;
 
 public class Borrar {
-	private static String URI = "xmldb:exist://192.168.149.8:8080/exist/xmlrpc";
+	private static String URI = "xmldb:exist://192.168.56.101:8080/exist/xmlrpc";
 
 	public static void main(String[] args) {
 
 		final String driver = "org.exist.xmldb.DatabaseImpl";
 		final String nombreColeccion = "/db/pruebas";
-		final String consultaXQuery = "for $b in doc(\"libros.xml\")//libro return data($b/titulo)";
 
 		Collection col = null;
 		XMLResource res = null;
@@ -30,7 +29,7 @@ public class Borrar {
 			Database database = (Database) cl.newInstance();
 			DatabaseManager.registerDatabase(database);
 
-			col = DatabaseManager.getCollection(URI + nombreColeccion);
+			col = DatabaseManager.getCollection(URI + nombreColeccion, "miusuario", "Pass!123456");
 			XQueryService service = (XQueryService) col.getService("XQueryService", "1.0");
 
 			// XQuery Update
@@ -41,6 +40,7 @@ public class Borrar {
 			if (result == null) {
 				System.out.println("null");
 			} else {
+				// en realidad no devuelve ningún valor
 				ResourceIterator i = result.getIterator();
 				while(i.hasMoreResources()) {
 					res = (XMLResource) i.nextResource();
