@@ -1,0 +1,34 @@
+[
+  {
+    "cif": "G50054188",
+    "nombre": "Patitos",
+    "direccion": "Avda de Madrid, 548",
+    "telefono": "976580012",
+    "ciudad": "Zaragoza",
+    "personaContacto": "Pedro Gil"
+  },
+  {
+    "cif": "G50112233",
+    "nombre": "Estrella Oliver",
+    "direccion": "C/La Moraleja, 11",
+    "telefono": "976589632",
+    "ciudad": "Zaragoza",
+    "personaContacto": "David Naranjo"
+  },
+  {
+    "cif": "G50784512",
+    "nombre": "Marcia Schull",
+    "direccion": "C/Espronceda, 5",
+    "telefono": "97635002",
+    "ciudad": "Zaragoza",
+    "personaContacto": "Melani Schull"
+  },
+  {
+    "cif": "G50985445",
+    "nombre": "Tigres",
+    "direccion": "C/Teresa Fornier",
+    "telefono": "91474558",
+    "ciudad": "Madrid",
+    "personaContacto": "Margarita Blanco"
+  }
+]

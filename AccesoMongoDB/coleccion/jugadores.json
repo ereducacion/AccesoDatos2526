@@ -1,0 +1,23 @@
+[
+  { "dni": "123123123E", "nombre": "María", "apellidos": "Laborda", "fNacimiento": "2012-03-15", "ciudad": "Zaragoza", "equipoId": 3 },
+  { "dni": "123456456D", "nombre": "Petra", "apellidos": "Florentin", "fNacimiento": "2012-06-21", "ciudad": "Zaragoza", "equipoId": 3 },
+  { "dni": "125745836W", "nombre": "Pedro", "apellidos": "Piquer", "fNacimiento": "2012-03-15", "ciudad": "Zaragoza", "equipoId": 3 },
+  { "dni": "135143133S", "nombre": "Nieves", "apellidos": "Ramirez", "fNacimiento": "2012-03-25", "ciudad": "Zaragoza", "equipoId": 4 },
+  { "dni": "321368400S", "nombre": "Perico", "apellidos": "Martinez", "fNacimiento": "2012-02-15", "ciudad": "Zaragoza", "equipoId": 4 },
+  { "dni": "329687313E", "nombre": "Victor", "apellidos": "Román", "fNacimiento": "2012-01-12", "ciudad": "Zaragoza", "equipoId": 4 },
+  { "dni": "354313213C", "nombre": "Alberto", "apellidos": "Pérez", "fNacimiento": "2012-02-04", "ciudad": "Lleida", "equipoId": 4 },
+  { "dni": "362235523J", "nombre": "Alejadro", "apellidos": "Campillo", "fNacimiento": "2012-07-15", "ciudad": "Logroño", "equipoId": 3 },
+  { "dni": "364656514V", "nombre": "Miguel", "apellidos": "Martinez", "fNacimiento": "2012-05-23", "ciudad": "Zaragoza", "equipoId": 5 },
+  { "dni": "445846533Q", "nombre": "Victor", "apellidos": "Biel", "fNacimiento": "2012-07-18", "ciudad": "Zaragoza", "equipoId": 5 },
+  { "dni": "452002312N", "nombre": "Kevin", "apellidos": "Ontin", "fNacimiento": "2012-02-15", "ciudad": "Zaragoza", "equipoId": 3 },
+  { "dni": "498432133S", "nombre": "Mario", "apellidos": "Gil", "fNacimiento": "2012-03-14", "ciudad": "Madrid", "equipoId": 5 },
+  { "dni": "561315130W", "nombre": "Marta", "apellidos": "Sanchez", "fNacimiento": "2012-03-16", "ciudad": "Zaragoza", "equipoId": 4 },
+  { "dni": "571224366Z", "nombre": "Antonio", "apellidos": "Pérez", "fNacimiento": "2012-12-05", "ciudad": "Zaragoza", "equipoId": 5 },
+  { "dni": "696646532F", "nombre": "Sheila", "apellidos": "Gimenez", "fNacimiento": "2012-12-15", "ciudad": "Zaragoza", "equipoId": 3 },
+  { "dni": "821613251D", "nombre": "Ana", "apellidos": "Goicoechea", "fNacimiento": "2012-10-15", "ciudad": "Vizcaya", "equipoId": 4 },
+  { "dni": "841431433S", "nombre": "Javier", "apellidos": "Martín", "fNacimiento": "2012-02-01", "ciudad": "Zaragoza", "equipoId": 5 },
+  { "dni": "854745855R", "nombre": "Juan", "apellidos": "Romero", "fNacimiento": "2012-04-15", "ciudad": "Madrid", "equipoId": 3 },
+  { "dni": "931836153E", "nombre": "Nines", "apellidos": "Ripoll", "fNacimiento": "2012-09-25", "ciudad": "Girona", "equipoId": 5 },
+  { "dni": "947111002L", "nombre": "Pedro", "apellidos": "Gimenez", "fNacimiento": "2012-11-15", "ciudad": "Zaragoza", "equipoId": 5 },
+  { "dni": "998461321S", "nombre": "Valeria", "apellidos": "Jimenez", "fNacimiento": "2012-03-17", "ciudad": "Zaragoza", "equipoId": 4 }
+]

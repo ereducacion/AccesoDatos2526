@@ -1,0 +1,13 @@
+[
+  { "id_Equipo": 1, "deporte": "Balonmano", "nombre": "Jovenes promesas", "ciudad": "Zaragoza", "direccion": "C/La esperanza, 42", "asociacionCif": "G50054188" },
+  { "id_Equipo": 2, "deporte": "Balonmano", "nombre": "Jovenes promesas Junior", "ciudad": "Zaragoza", "direccion": "C/La esperanza, 42", "asociacionCif": "G50054188" },
+  { "id_Equipo": 3, "deporte": "Balonmano", "nombre": "Carambola", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50054188" },
+  { "id_Equipo": 4, "deporte": "Balonmano", "nombre": "Pitufos", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50784512" },
+  { "id_Equipo": 5, "deporte": "Balonmano", "nombre": "Guerreras", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50985445" },
+  { "id_Equipo": 6, "deporte": "Voleybol", "nombre": "Estrella Oliver 1", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50112233" },
+  { "id_Equipo": 7, "deporte": "Voleybol", "nombre": "Estrella Oliver 2", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50112233" },
+  { "id_Equipo": 8, "deporte": "Voleybol", "nombre": "Tigres 1", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50784512" },
+  { "id_Equipo": 9, "deporte": "Voleybol", "nombre": "Melancolicos", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50985445" },
+  { "id_Equipo": 10, "deporte": "Tenis", "nombre": "Bolainas", "ciudad": "Madrid", "direccion": null, "asociacionCif": "G50784512" },
+  { "id_Equipo": 11, "deporte": "Tenis", "nombre": "Raquetitas", "ciudad": "Zaragoza", "direccion": null, "asociacionCif": "G50985445" }
+]

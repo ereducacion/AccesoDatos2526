@@ -1,0 +1,3 @@
+mongoimport --db MiBaseDatos --collection asociaciones --file asociaciones.json --jsonArray
+mongoimport --db MiBaseDatos --collection equipos --file equipos.json --jsonArray
+mongoimport --db MiBaseDatos --collection jugadores --file jugadores.json --jsonArray
